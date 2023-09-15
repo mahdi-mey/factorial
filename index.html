@@ -6,9 +6,25 @@
     <title>Factorial</title>
 </head>
 <body>
+
+    <button onclick="calculateFactorial()">Find Factorial</button>
     
     <script>
-        
+        function calculateFactorial() {
+
+            let userNum = Number(prompt('Enter a number', 0))
+
+            if (userNum == 0 || userNum == 1) {
+                alert(`factorial is ${1}`)
+            } else {
+                let output = 1
+                for (i = 1; i <= userNum; i++) {
+                    output = output * i
+                }
+                alert(`factorial is ${output}`)
+            }
+        }
+        calculateFactorial()
     </script>
 </body>
 </html>
